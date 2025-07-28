@@ -1,0 +1,363 @@
+/* Reset et base */
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #191d38;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+nav a {
+  content: "";
+  color: #d9ebe6;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #005ea6;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fafafa;
+  padding: 10px 15px;
+  margin: 0 5px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  color: #005ea6;
+}
+
+nav a.active {
+  color: rgb(212, 233, 228);
+  position: relative;
+  bottom: -5px;
+  width: auto;
+  height: auto;
+  text-decoration: underline;
+  text-decoration-color: rgb(246, 250, 1);
+  text-decoration-thickness: 3px;
+  background-color: #0b81e2;
+  font-weight: 100px;
+  border-radius: 10000000000px;
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 2;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 2;
+  }
+}
+
+/* Titres principaux */
+h1,
+h3,
+h4 {
+  color: #191d38;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  color: #c3c9ec;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 700;
+}
+
+/* Liens généraux */
+a {
+  color: #005ea6;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #191d38;
+}
+
+/* Boutons */
+.btn,
+.contact-form .btn,
+.hero .btn {
+  background-color: #005ea6;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 2px 12px rgba(25, 29, 56, 0.08);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover,
+.contact-form .btn:hover,
+.hero .btn:hover {
+  background: #191d38;
+  color: #fff;
+}
+
+/* Sections principales */
+main {
+  background: #f4f4f4;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 1100px;
+  box-shadow: 0 2px 16px rgba(25, 29, 56, 0.04);
+  padding: 40px 30px;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(120deg, #191d38 60%, #005ea6 100%);
+  color: #fff;
+  padding: 80px 0 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 1.2s;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 32px;
+  color: #e0e6f7;
+}
+
+.hero .btn {
+  font-size: 1.15em;
+  padding: 14px 36px;
+  border-radius: 30px;
+  background: #fff;
+  color: #191d38;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(25, 29, 56, 0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero .btn:hover {
+  background: #005ea6;
+  color: #fff;
+}
+
+/* Services */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(25, 29, 56, 0.08);
+  padding: 32px 28px 24px 28px;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, border-top 0.2s;
+  animation: fadeIn 1s;
+  border-top: 4px solid #005ea6;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(25, 29, 56, 0.13);
+  border-top: 4px solid #191d38;
+}
+
+.service-emoji {
+  font-size: 2.2em;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: #191d38;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.service-card p {
+  color: #555;
+  font-size: 1em;
+}
+
+/* Formulaire de contact */
+.contact-form {
+  max-width: 450px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px 25px 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(25, 29, 56, 0.08);
+  animation: fadeIn 1s;
+  border-top: 4px solid #005ea6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #191d38;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 1em;
+  background: #f9f9fb;
+  transition: border 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #005ea6;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  width: 100%;
+  font-size: 1.1em;
+  padding: 12px 0;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form .btn:hover {
+  background-color: #191d38;
+}
+
+/* Equipe */
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.team-card {
+  background: #bff5ef73;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(25, 29, 56, 0.08);
+  padding: 28px 22px 20px 22px;
+  width: 220px;
+  text-align: center;
+  border-top: 4px solid #005ea6;
+  transition: transform 0.2s, box-shadow 0.2s, border-top 0.2s;
+  animation: fadeIn 1s;
+}
+
+.team-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(25, 29, 56, 0.13);
+  border-top: 4px solid #191d38;
+}
+
+.team-photo {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 3px solid #005ea6;
+}
+
+.team-card h3 {
+  margin-bottom: 6px;
+  color: #191d38;
+  font-size: 1.15em;
+  font-weight: 700;
+}
+
+.team-card p {
+  color: #005ea6;
+  font-size: 1em;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.team-desc {
+  color: #555;
+  font-size: 0.97em;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Pied de page */
+footer {
+  background: #191d38;
+  color: #fff;
+  padding: 18px 0;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
